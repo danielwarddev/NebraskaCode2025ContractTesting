@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductEventHandler", "ProductEventHandler\ProductEventHandler.csproj", "{A413C522-A6CD-4593-B5B7-28C7BA51B3C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductEventHandler.IntegrationTests", "ProductEventHandler.IntegrationTests\ProductEventHandler.IntegrationTests.csproj", "{11EEEFE2-E9BF-4D90-A852-902A9A3F9B79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A413C522-A6CD-4593-B5B7-28C7BA51B3C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A413C522-A6CD-4593-B5B7-28C7BA51B3C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A413C522-A6CD-4593-B5B7-28C7BA51B3C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A413C522-A6CD-4593-B5B7-28C7BA51B3C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11EEEFE2-E9BF-4D90-A852-902A9A3F9B79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11EEEFE2-E9BF-4D90-A852-902A9A3F9B79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11EEEFE2-E9BF-4D90-A852-902A9A3F9B79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11EEEFE2-E9BF-4D90-A852-902A9A3F9B79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

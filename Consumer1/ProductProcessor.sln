@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductProcessor", "ProductProcessor\ProductProcessor.csproj", "{797E5C1C-B370-42E8-B955-568A2C5827CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductProcessor.IntegrationTests", "ProductProcessor.IntegrationTests\ProductProcessor.IntegrationTests.csproj", "{1C363E36-C1B1-4B04-AB4A-BF7BC4A82633}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{797E5C1C-B370-42E8-B955-568A2C5827CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{797E5C1C-B370-42E8-B955-568A2C5827CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{797E5C1C-B370-42E8-B955-568A2C5827CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{797E5C1C-B370-42E8-B955-568A2C5827CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C363E36-C1B1-4B04-AB4A-BF7BC4A82633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C363E36-C1B1-4B04-AB4A-BF7BC4A82633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C363E36-C1B1-4B04-AB4A-BF7BC4A82633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C363E36-C1B1-4B04-AB4A-BF7BC4A82633}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
