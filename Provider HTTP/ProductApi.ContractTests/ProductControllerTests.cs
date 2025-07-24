@@ -17,8 +17,10 @@ public class ProductControllerTests : IClassFixture<ProductApiFixture>
         _outputHelper = outputHelper;
     }
     
-    [Fact]
-    public void Verify_MyService_Pact_Is_Honored()
+    [Theory]
+    [InlineData("Product Processor-Product API.json")]
+    //[InlineData("Product Processor TS-Product API.json")]
+    public void Verify_Contract_Is_Honored(string contractFileName)
     {
         var config = new PactVerifierConfig
         {
@@ -26,7 +28,7 @@ public class ProductControllerTests : IClassFixture<ProductApiFixture>
             Outputters = new List<IOutput> { new XunitOutput(_outputHelper), new ConsoleOutput() }
         };
 
-        var pactPath = Path.Combine("Pacts", "My Consumer Service-Product API.json");
+        var pactPath = Path.Combine("Pacts", contractFileName);
         var pactVerifier = new PactVerifier("Product API", config);
         
         pactVerifier

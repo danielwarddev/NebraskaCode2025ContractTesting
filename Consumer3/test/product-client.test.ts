@@ -5,7 +5,7 @@ import path from "path";
 describe("product-processor", () => {
   const provider = new PactV4({
     dir: path.join(__dirname, "../pacts"),
-    consumer: "Product Processor",
+    consumer: "Product Processor TS",
     provider: "Product API",
   });
 

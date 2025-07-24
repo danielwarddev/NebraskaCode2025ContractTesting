@@ -1,0 +1,84 @@
+{
+  "consumer": {
+    "name": "Product Event Processor"
+  },
+  "interactions": [
+    {
+      "contents": {
+        "content": {
+          "Id": 1,
+          "Location": "San Antonio",
+          "Name": "Rubber Chicken Deluxe",
+          "Price": 50
+        },
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "A product event",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "contentType": "application/json"
+      },
+      "pending": false,
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": {
+          "Id": 1,
+          "Location": "Nebraska",
+          "Name": "10lb Frozen Burrito",
+          "Price": 10
+        },
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "An product event",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "contentType": "application/json"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "some expected provider state"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    }
+  ],
+  "metadata": {
+    "pactRust": {
+      "ffi": "0.4.27",
+      "models": "1.2.8"
+    },
+    "pactSpecification": {
+      "version": "4.0"
+    }
+  },
+  "provider": {
+    "name": "Product Event Publisher"
+  }
+}

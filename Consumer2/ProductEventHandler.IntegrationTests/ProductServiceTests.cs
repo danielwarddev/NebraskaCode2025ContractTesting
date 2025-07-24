@@ -5,9 +5,9 @@ namespace ProductEventHandler.IntegrationTests;
 
 public class ProductServiceTests
 {
-private readonly ProductService _productService = new();
+private readonly ProductService _productService = new(new ProductRepository());
     private readonly IMessagePactBuilderV4 _pactBuilder = Pact
-        .V4("Product Event Handler", "Product Event Publisher", new PactConfig())
+        .V4("Product Event Processor", "Product Event Publisher", new PactConfig())
         .WithMessageInteractions();
  
     [Fact]
@@ -35,7 +35,7 @@ private readonly ProductService _productService = new();
         var expectedProductEvent = new Product(1, "10lb Frozen Burrito", 10, "Nebraska");
 
         await _pactBuilder
-            .ExpectsToReceive("An product event")
+            .ExpectsToReceive("A product event")
             // Given() is probably more rarely needed for message contracts
             // You're not expecting multiple status codes, it either goes on the queue or it doesn't
             .Given("some expected provider state")

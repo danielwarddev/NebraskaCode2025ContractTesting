@@ -3,6 +3,8 @@ using ProductApi.Api.ProductDomain;
 
 namespace ProductApi.Api.Controllers;
 
+//http://localhost:5244/openapi/v1.json
+
 [ApiController]
 [Route("[controller]")]
 public class ProductController : ControllerBase
@@ -15,6 +17,7 @@ public class ProductController : ControllerBase
     }
 
     [HttpGet("/products")]
+    [ProducesResponseType(typeof(IEnumerable<ProductDto>), StatusCodes.Status200OK)]
     public async Task<ActionResult<ProductDto>> GetAllProducts([FromQuery] string? name = null)
     {
         if (name != null)
@@ -28,6 +31,8 @@ public class ProductController : ControllerBase
     }
 
     [HttpGet("/product/{productId:int}")]
+    [ProducesResponseType(typeof(ProductDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<ProductDto>> GetProduct(int productId)
     {
         var product = await _productService.GetProduct(productId);
