@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 using ProductApi.Api.ProductDomain;
 using ProductApi.Database;

@@ -1,6 +1,6 @@
 {
   "consumer": {
-    "name": "Product Processor"
+    "name": "Product Processor TS"
   },
   "interactions": [
     {
@@ -21,61 +21,7 @@
           ]
         },
         "method": "GET",
-        "path": "/products/1"
-      },
-      "response": {
-        "body": {
-          "content": {
-            "id": 1,
-            "location": "Antarctica",
-            "name": "Brain Smoother 5000",
-            "price": 100
-          },
-          "contentType": "application/json",
-          "encoded": false
-        },
-        "headers": {
-          "Content-Type": [
-            "application/json"
-          ]
-        },
-        "matchingRules": {
-          "body": {
-            "$": {
-              "combine": "AND",
-              "matchers": [
-                {
-                  "match": "type"
-                }
-              ]
-            }
-          },
-          "header": {},
-          "status": {}
-        },
-        "status": 200
-      },
-      "type": "Synchronous/HTTP"
-    },
-    {
-      "description": "a request for a product",
-      "pending": false,
-      "providerStates": [
-        {
-          "name": "products exist"
-        }
-      ],
-      "request": {
-        "headers": {
-          "Accept": [
-            "application/json"
-          ],
-          "Content-Type": [
-            "application/json"
-          ]
-        },
-        "method": "GET",
-        "path": "/products/1"
+        "path": "/product/1"
       },
       "response": {
         "body": {

@@ -9,10 +9,10 @@ describe("product-processor", () => {
     provider: "Product API",
   });
 
-  it("GET /product should return a product", () => {
+  it("a GET request to retrieve a product", () => {
     const expectedProduct = {
       id: 1,
-      name: "Brain Smoother 5000gm",
+      name: "Brain Smoother 5000",
       price: 100,
       location: "Antarctica",
     };
@@ -21,7 +21,7 @@ describe("product-processor", () => {
       .addInteraction()
       .given("A product exists")
       .uponReceiving("A request for a product")
-      .withRequest("GET", "/products/1", (request) => {
+      .withRequest("GET", "/product/1", (request) => {
         request.headers({
           Accept: "application/json",
           "Content-Type": "application/json",

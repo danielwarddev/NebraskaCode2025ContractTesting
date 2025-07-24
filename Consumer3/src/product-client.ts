@@ -21,7 +21,7 @@ export class ProductClient {
   }
 
   public async getProduct(productId: number): Promise<Product> {
-    const response = await this.axiosInstance.get<Product>(`/products/${productId}`);
+    const response = await this.axiosInstance.get<Product>(`/product/${productId}`);
     return response.data;
   }
 }
