@@ -33,6 +33,7 @@ public class ProductControllerTests : IClassFixture<ProductApiFixture>
         
         pactVerifier
             .WithHttpEndpoint(_apiFixture.PactServerUri)
+            //.WithPactBrokerSource(new Uri("http://localhost"))
             .WithFileSource(new FileInfo(pactPath))
             .WithProviderStateUrl(new Uri(_apiFixture.PactServerUri, "/provider-states"))
             .Verify();
