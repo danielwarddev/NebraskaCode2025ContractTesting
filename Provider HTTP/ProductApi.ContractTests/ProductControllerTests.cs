@@ -19,7 +19,7 @@ public class ProductControllerTests : IClassFixture<ProductApiFixture>
     
     [Theory]
     [InlineData("Product Processor-Product API.json")]
-    //[InlineData("Product Processor TS-Product API.json")]
+    [InlineData("Product Processor TS-Product API.json")]
     public void Verify_Contract_Is_Honored(string contractFileName)
     {
         var config = new PactVerifierConfig

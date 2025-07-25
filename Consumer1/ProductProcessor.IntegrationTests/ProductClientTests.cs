@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using System.Text.Json;
 using AwesomeAssertions;
 using PactNet;
 
@@ -9,7 +10,10 @@ public class ProductClientTests
     private readonly HttpClient _httpClient;
     private readonly ProductClient _productClient;
     private readonly IPactBuilderV4 _pactBuilder = Pact
-        .V4("Product Processor", "Product API", new PactConfig())
+        .V4("Product Processor", "Product API", new PactConfig()
+        {
+            DefaultJsonSettings = new() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase }
+        })
         .WithHttpInteractions();
 
     public ProductClientTests()
